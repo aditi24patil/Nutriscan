@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NutriScan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <div class="top-bar">
+    <div class="auth-links" id="authLinks"></div>
+  </div>
+
+  <div class="container">
+
+    <h1>NutriScan</h1>
+    <p class="tagline">Scan Smart. Eat Smart.</p>
+
+    <!-- ACTION BOXES -->
+    <div class="action-grid" id="homeActions">
+
+      <div class="action-box" onclick="uploadImage()">
+        <h3>Upload Image</h3>
+        <p>Select a nutrition label</p>
+      </div>
+
+      <div class="action-box" onclick="openCamera()">
+        <h3>Scan Image</h3>
+        <p>Use camera to scan label</p>
+      </div>
+
+      <div class="action-box" onclick="checkHistory()">
+        <h3>Check History</h3>
+        <p>View saved scans</p>
+      </div>
+
+    </div>
+
+    <!-- RESULT AREA -->
+    <div id="resultBox" class="hidden">
+      <h2>Scan Result</h2>
+      <p class="info">Sugar: 12g | High Risk</p>
+
+      <button class="primary-btn" onclick="scanAgain()">Scan Again</button>
+    </div>
+
+    <!-- Hidden Inputs -->
+    <input type="file" id="imageInput" accept="image/*" hidden />
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+
+    <p id="message" class="info"></p>
+
+    <p class="baseline">Based on FSSAI guidelines</p>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
