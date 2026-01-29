@@ -4,58 +4,41 @@
   <meta charset="UTF-8" />
   <title>NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- TOP NAV -->
   <div class="top-bar">
-    <div class="auth-links" id="authLinks"></div>
-  </div>
-
-  <div class="container">
-
-    <h1>NutriScan</h1>
-    <p class="tagline">Scan Smart. Eat Smart.</p>
-
-    <!-- ACTION BOXES -->
-    <div class="action-grid" id="homeActions">
-
-      <div class="action-box" onclick="uploadImage()">
-        <h3>Upload Image</h3>
-        <p>Select a nutrition label</p>
-      </div>
-
-      <div class="action-box" onclick="openCamera()">
-        <h3>Scan Image</h3>
-        <p>Use camera to scan label</p>
-      </div>
-
-      <div class="action-box" onclick="checkHistory()">
-        <h3>Check History</h3>
-        <p>View saved scans</p>
-      </div>
-
+    <div class="auth-links" id="authLinks">
+     <a href="login.html" class="auth-pill">Login</a>
+     <a href="register.html" class="auth-pill primary">Register</a>
     </div>
 
-    <!-- RESULT AREA -->
-    <div id="resultBox" class="hidden">
-      <h2>Scan Result</h2>
-      <p class="info">Sugar: 12g | High Risk</p>
+  </div>
 
-      <button class="primary-btn" onclick="scanAgain()">Scan Again</button>
+  <section class="hero">
+
+    <h1 class="hero-title">NutriScan</h1>
+
+    <p class="hero-tagline">
+      Food labels decoded for you
+    </p>
+
+    <!-- FACT LOOP -->
+    <div class="fact-wrapper">
+      <p id="fact" class="fact"></p>
     </div>
 
-    <!-- Hidden Inputs -->
-    <input type="file" id="imageInput" accept="image/*" hidden />
-    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+    <a href="scan.html" class="cta-btn">
+      Start Scanning!
+    </a>
 
-    <p id="message" class="info"></p>
+  </section>
 
-    <p class="baseline">Based on FSSAI guidelines</p>
-
-  </div>
+  <p class="baseline">Based on FSSAI guidelines</p>
 
   <script src="app.js"></script>
 </body>

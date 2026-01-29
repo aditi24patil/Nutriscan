@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scan Options | NutriScan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <section class="scan-hero">
+    <h2>Scan Smart. Eat Smart.</h2>
+  </section>
+
+  <section class="actions-section">
+
+    <div class="action-card" onclick="uploadImage()">
+      <h3>Upload Image</h3>
+      <div class="underline"></div>
+      <p>Upload label from gallery</p>
+    </div>
+
+    <div class="action-card" onclick="openCamera()">
+      <h3>Scan Image</h3>
+      <div class="underline"></div>
+      <p>Use camera to scan the label</p>
+    </div>
+
+    <div class="action-card" onclick="checkHistory()">
+      <h3>View History</h3>
+      <div class="underline"></div>
+      <p>Check your scanned labels</p>
+    </div>
+
+  </section>
+
+  <input type="file" id="imageInput" accept="image/*" hidden />
+  <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+
+  <script src="app.js"></script>
+</body>
+</html>

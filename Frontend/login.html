@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <title>Login | NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="container">
 
-    <h2>Login</h2>
+  <div class="auth-container">
+
+    <h2>Welcome back 👋</h2>
 
     <input type="email" id="loginEmail" placeholder="Email" />
     <input type="password" id="loginPassword" placeholder="Password" />
 
-    <button class="primary-btn" onclick="login()">Login</button>
+    <button onclick="login()">Login</button>
 
-    <p class="info">
-      Don’t have an account?
-      <a href="register.html">Register</a>
+    <p class="auth-footer">
+      New here? <a href="register.html">Register</a>
     </p>
-
-    <p id="loginMessage" class="info"></p>
 
   </div>
 

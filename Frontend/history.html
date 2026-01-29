@@ -2,39 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Scan History</title>
+  <title>Scan History | NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="container">
-    <h2>Your Scan History</h2>
+
+  <div class="auth-container">
+
+    <h2>Your Scan History 📜</h2>
 
     <div id="historyList"></div>
 
-    <button class="secondary-btn" onclick="goHome()">Back to Home</button>
+    <button onclick="goHome()">Back to Home</button>
+
   </div>
 
   <script>
     const token = localStorage.getItem("token");
 
     if (!token) {
-      window.location.href = "index.html";
+      alert("Please login to view your scan history 🙂");
+      window.location.href = "login.html";
     }
 
     const historyList = document.getElementById("historyList");
 
-    // Dummy data for now
+    /* Dummy history data */
     const dummyHistory = [
-      "Sugar: 12g | High Risk",
-      "Sugar: 4g | Healthy"
+      { text: "Sugar: 12g | High Risk", color: "#dc2626" },
+      { text: "Sugar: 4g | Healthy", color: "#16a34a" }
     ];
 
     dummyHistory.forEach(item => {
       const div = document.createElement("div");
-      div.className = "result-card green";
-      div.innerText = item;
+      div.style.background = item.color;
+      div.style.color = "#fff";
+      div.style.padding = "14px 20px";
+      div.style.borderRadius = "14px";
+      div.style.margin = "10px 0";
+      div.style.fontSize = "14px";
+      div.innerText = item.text;
       historyList.appendChild(div);
     });
 
@@ -42,5 +53,6 @@
       window.location.href = "index.html";
     }
   </script>
+
 </body>
 </html>
