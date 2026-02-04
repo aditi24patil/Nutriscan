@@ -5,19 +5,21 @@
   <title>Scan History | NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="auth-page">
 
   <div class="auth-container">
+    <div class="auth-card history-card">
+      <h2>Your Scan History</h2>
+      <p class="auth-subtitle">Every scan, a little smarter than the last.</p>
 
-    <h2>Your Scan History 📜</h2>
+      <div id="historyList"></div>
 
-    <div id="historyList"></div>
-
-    <button onclick="goHome()">Back to Home</button>
+      <button onclick="goHome()">Back to Home</button>
+    </div>
 
   </div>
 
@@ -39,12 +41,8 @@
 
     dummyHistory.forEach(item => {
       const div = document.createElement("div");
-      div.style.background = item.color;
-      div.style.color = "#fff";
-      div.style.padding = "14px 20px";
-      div.style.borderRadius = "14px";
-      div.style.margin = "10px 0";
-      div.style.fontSize = "14px";
+      div.classList.add("history-item");
+      div.style.setProperty("--status-color", item.color);
       div.innerText = item.text;
       historyList.appendChild(div);
     });

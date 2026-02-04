@@ -5,27 +5,29 @@
   <title>Register | NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="auth-page">
 
   <div class="auth-container">
+    <div class="auth-card">
+      <h2>Create your account</h2>
+      <p class="auth-subtitle">Start scanning with a smarter, healthier lens.</p>
 
-    <h2>Create your account ✨</h2>
+      <input type="text" id="firstName" placeholder="First Name" />
+      <input type="text" id="lastName" placeholder="Last Name" />
+      <input type="email" id="registerEmail" placeholder="Email" />
+      <input type="password" id="registerPassword" placeholder="Password" />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" />
 
-    <input type="text" id="firstName" placeholder="First Name" />
-    <input type="text" id="lastName" placeholder="Last Name" />
-    <input type="email" id="registerEmail" placeholder="Email" />
-    <input type="password" id="registerPassword" placeholder="Password" />
-    <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+      <button onclick="register()">Register</button>
 
-    <button onclick="register()">Register</button>
-
-    <p class="auth-footer">
-      Already have an account? <a href="login.html">Login</a>
-    </p>
+      <p class="auth-footer">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </div>
 
   </div>
 

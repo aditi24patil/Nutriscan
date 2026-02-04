@@ -5,31 +5,37 @@
   <title>Scan Options | NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="scan-page">
 
   <section class="scan-hero">
     <h2>Scan Smart. Eat Smart.</h2>
+    <p class="scan-subtitle">Point, capture, and let NutriScan do the thinking.</p>
+    <div class="scan-pulse" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </section>
 
   <section class="actions-section">
 
-    <div class="action-card" onclick="uploadImage()">
+    <div class="action-card card-upload" onclick="uploadImage()">
       <h3>Upload Image</h3>
       <div class="underline"></div>
       <p>Upload label from gallery</p>
     </div>
 
-    <div class="action-card" onclick="openCamera()">
+    <div class="action-card card-scan" onclick="openCamera()">
       <h3>Scan Image</h3>
       <div class="underline"></div>
       <p>Use camera to scan the label</p>
     </div>
 
-    <div class="action-card" onclick="checkHistory()">
+    <div class="action-card card-history" onclick="checkHistory()">
       <h3>View History</h3>
       <div class="underline"></div>
       <p>Check your scanned labels</p>
@@ -39,6 +45,30 @@
 
   <input type="file" id="imageInput" accept="image/*" hidden />
   <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+
+  <div id="scannerModal" class="scanner-modal" aria-hidden="true">
+    <div class="scanner-card">
+      <div class="scanner-header">
+        <h3>Label Scanner</h3>
+        <button class="scanner-close" onclick="closeScanner()">Close</button>
+      </div>
+      <p class="scanner-subtitle">Align the label inside the frame and tap Capture.</p>
+      <div class="scanner-frame">
+        <video id="scannerVideo" autoplay playsinline></video>
+        <canvas id="scannerCanvas"></canvas>
+        <div class="scanner-overlay">
+          <span class="scan-corner tl"></span>
+          <span class="scan-corner tr"></span>
+          <span class="scan-corner bl"></span>
+          <span class="scan-corner br"></span>
+          <span class="scan-line"></span>
+        </div>
+      </div>
+      <div class="scanner-actions">
+        <button class="scanner-capture" onclick="captureScan()">Capture</button>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

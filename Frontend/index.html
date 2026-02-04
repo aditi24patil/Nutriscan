@@ -5,11 +5,11 @@
   <title>NutriScan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="home-page">
 
   <div class="top-bar">
     <div class="auth-links" id="authLinks">
@@ -20,21 +20,63 @@
   </div>
 
   <section class="hero">
-
-    <h1 class="hero-title">NutriScan</h1>
-
-    <p class="hero-tagline">
-      Food labels decoded for you
-    </p>
-
-    <!-- FACT LOOP -->
-    <div class="fact-wrapper">
-      <p id="fact" class="fact"></p>
+    <div class="hero-ornaments" aria-hidden="true">
+      <button class="orb orb-a orb-md" data-title="Hidden Sugar" data-body="Labels reveal added sugar and sneaky sweeteners so you can keep energy steady and avoid spikes."></button>
+      <button class="orb orb-b orb-sm" data-title="Compare Smarter" data-body="Nutrition panels make it easy to compare brands and pick the healthiest option fast."></button>
+      <button class="orb orb-c orb-md" data-title="Allergen Safety" data-body="Ingredient lists help you avoid allergens and additives that don’t work for your body."></button>
+      <button class="orb orb-d orb-sm" data-title="Portion Reality" data-body="Serving sizes show what a typical portion really is, so numbers make sense."></button>
+      <button class="orb orb-e orb-xs" data-title="Salt Watch" data-body="Sodium levels help you protect heart health and avoid hidden salt."></button>
+      <button class="orb orb-f orb-sm" data-title="Fiber Wins" data-body="Fiber on labels helps you pick foods that keep you full and support digestion."></button>
+      <button class="orb orb-g orb-xs" data-title="Energy Control" data-body="Calories tell you how a food fits into your daily energy needs."></button>
+      <button class="orb orb-h orb-sm" data-title="Ingredient Order" data-body="Ingredients are listed by amount, so the first items matter most."></button>
+      <button class="orb orb-i orb-xs" data-title="Fewer Additives" data-body="Reading labels helps you spot additives and choose simpler, cleaner foods."></button>
+      <button class="orb orb-j orb-sm" data-title="Better Choices" data-body="Seeing the numbers helps you build habits that match your goals."></button>
+      <button class="orb orb-k orb-xs" data-title="Sugar Swap" data-body="Labels let you swap to lower sugar options without guessing."></button>
+      <button class="orb orb-l orb-sm" data-title="Daily Limits" data-body="Nutrition facts show how a food contributes to daily recommended limits."></button>
     </div>
 
-    <a href="scan.html" class="cta-btn">
-      Start Scanning!
-    </a>
+    <div class="hero-content">
+      <h1 class="hero-title">NutriScan</h1>
+
+      <p class="hero-tagline">
+        Food labels decoded for you
+      </p>
+
+      <!-- FACT LOOP -->
+      <div class="fact-wrapper">
+        <p id="fact" class="fact"></p>
+      </div>
+
+      <a href="scan.html" class="cta-btn">
+        Start Scanning!
+      </a>
+
+      <div id="bubbleInfo" class="bubble-info" aria-live="polite" role="status">
+        <h4 id="bubbleTitle">Why labels matter</h4>
+        <p id="bubbleBody">Tap a bubble to learn how reading nutrition labels protects your health.</p>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="scan-frame">
+        <div class="scan-card">
+          <span class="scan-dot"></span>
+          <span class="scan-line"></span>
+          <div class="scan-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p>Label intelligence in seconds</p>
+        </div>
+      </div>
+      <div class="floating-badges">
+        <span class="badge">Low Sugar</span>
+        <span class="badge">High Fiber</span>
+        <span class="badge">FSSAI Ready</span>
+      </div>
+    </div>
 
   </section>
 
