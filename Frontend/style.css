@@ -955,7 +955,31 @@ body::after {
   }
 
   .hero-ornaments {
-    inset: -20%;
+    display: block;
+    inset: -10%;
+  }
+
+  body::before,
+  body::after {
+    animation: none;
+    opacity: 0.2;
+  }
+
+  .orb-d,
+  .orb-e,
+  .orb-f,
+  .orb-g,
+  .orb-h,
+  .orb-i,
+  .orb-j,
+  .orb-k,
+  .orb-l {
+    display: none;
+  }
+
+  .scan-frame {
+    width: min(360px, 92vw);
+    height: 260px;
   }
 
   .orb-sm {
